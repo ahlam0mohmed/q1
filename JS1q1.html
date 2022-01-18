@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        Name<input type="text" id="na" pattern="[A-Z a-z]+">
+        <label id="ln"></label>
+        Age <input type="number" id="ag">
+        <label id="la"></label>
+        E_mail<input type="text" id="em">
+        <label id="le" ></label>
+        Mobil No<input type="text" id="num" >
+        <label id="lm"></label> 
+        <button type="button" id="go" onclick="myFunction()">send</button>
+        </form>
+</body>
+<script>
+    function myFunction(){
+        var name =document.getElementById("na")
+    var age =document.getElementById("ag");
+    var e_mail =document.getElementById("em");
+    var numb =document.getElementById("num");
+    if (name.value.length > 3 && name.value.length < 10 )  {
+
+    }
+    else{
+        document.getElementById("ln").innerText="must be more 3 and less 10";
+    }
+    if (age<18) {
+      document.getElementById("la") ="must be over 18 year old";  
+    }
+    if (numb.value.length!=9) {
+        document.getElementById("lm")="must be equle 9 number";
+    }
+
+} 
+</script>
+</html>
